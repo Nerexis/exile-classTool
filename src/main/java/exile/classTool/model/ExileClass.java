@@ -15,7 +15,7 @@ public final class ExileClass implements Comparable<ExileClass> {
     private final ExileClassProperties properties;
 
     public ExileClass(@NotNull String className, int quality, int price, Integer sellPrice) {
-        this.className = className;
+        this.className = className.toLowerCase();
         this.properties = new ExileClassProperties(quality, price, sellPrice);
         logger.finest("constructor: " + this.toString());
     }
